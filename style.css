@@ -190,3 +190,9 @@ input[type="radio"]:checked + label {
 	top: 10px;
 	left: 10px;
 }
+
+.github-ribbon {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
