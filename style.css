@@ -71,6 +71,7 @@ div[role="main"]:after {
 			line-height: 1;
 			text-indent: 0;
 			text-shadow: none;
+			letter-spacing: 0;
 		}
 	
 		a[data-property]:before {
