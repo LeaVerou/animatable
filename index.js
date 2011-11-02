@@ -7,25 +7,40 @@ $$('a[data-property]').forEach(function(el, i){
 	var property = el.getAttribute('data-property'),
 		from = el.getAttribute('data-from'),
 		to = el.getAttribute('data-to');
-	
+
 	var id = property, i = 1;
-	
+    
 	while(document.getElementById(id)) {
 		id = property + '/' + ++i;
 	}
 	
 	el.id = id;
 	el.href = '#' + id;
-	
-	el.title = property + ' from ' + from + ' to ' + to;
+
+	el.title = property.replace('|',' & ') + ' from ' + from + ' to ' + to;
 	
 	var selector = '#' + id.replace(/([^\w-])/g, '\\$1'),
 		ident = id.replace(/([^\w-])/g, '-');
-	
+
 	css.push('@keyframes ' + ident + '{',
-			'from{' + property + ':' + from + '}',
-			'to{' + property + ':' + to + '}}',
+			'from{' + parseData(from) + '}',
+			'to{' + parseData(to) + '}}',
 			selector + ' { animation: ' + ident + ' 1s infinite alternate;' + property + ':' + from + '}');
+
+    function parseData(attr){
+        var rule = '',
+            value = attr.split('|'),
+            prop = property.split('|');
+
+        console.log(prop)
+
+        prop.forEach(function(el, i){
+            rule += el + ':' + value[i] + ';';
+        });
+
+        console.log(rule)
+        return rule;
+    };
 });
 
 var style = document.createElement('style');
