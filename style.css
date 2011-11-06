@@ -1,198 +1,229 @@
-* {
-	margin: 0;
+HTML > BODY > *
+{
+	margin:0;
 }
 
-body {
-	padding: 1em 5em;
-	font: 1em/1.5em Futura, 'Century Gothic', sans-serif;
-	text-align: center;
-	overflow-x: hidden;
+BODY
+{
+	padding:1em 5em;
+	font:1em/1.5em 'Futura','Century Gothic',sans-serif;
+	text-align:center;
+	overflow-x:hidden;
 }
 
-hgroup > h1 {
-	font-size: 500%;
-	line-height: 1;
-	text-transform: lowercase;
+HGROUP > H1
+{
+	font-size:500%;
+	line-height:1;
+	text-transform:lowercase;
 }
 
-hgroup > h2 {
-	font-size: 120%;
+HGROUP > H2
+{
+	font-size:120%;
 }
 
-a {
-	text-decoration: none;
-	color: slategray;
+A
+{
+	text-decoration:none;
+	color:slategray;
 }
 
-div[role="main"] {
-	padding: 2em .5em;
-	counter-reset: demo;
+DIV[role="main"]
+{
+	padding:2em .5em;
+	counter-reset:demo;
 }
 
-div[role="main"]:after {
-	content: '';
-	display: block;
-	clear: both;
+DIV[role="main"]:after
+{
+	content:'';
+	display:block;
+	clear:both;
 }
 
-	a[data-property] {
-		position: relative;
-		float: left;
-		width: 150px;
-		height: 150px;
-		box-sizing: border-box;
-		margin: 0 15px 30px;
-		background: slategray;
-		color: white;
-		font-size: 60px;
-		line-height: 150px;
-		text-align: center;
-		counter-increment: demo;
+	A[data-property]
+{
+		position:relative;
+		float:left;
+		width:150px;
+		height:150px;
+		box-sizing:border-box;
+		margin:0 15px 30px;
+		background:slategray;
+		color:white;
+		font-size:60px;
+		line-height:150px;
+		text-align:center;
+		counter-increment:demo;
 	}
 	
-	body.in-page a[data-property]:not(:target) {
-		opacity: .2 !important;
+	BODY.in-page A[data-property]:not(:target)
+	{
+		opacity:.2 !important;
 	}
 	
-	#on-hover:checked ~ div[role="main"] > a[data-property]:not(:hover):not(:target),
-	body.in-page a[data-property]:not(:target) {
-		animation: none !important;
+	#on-hover:CHECKED ~ DIV[role="main"] > A[data-property]:not(:hover):not(:target),
+	BODY.in-page A[data-property]:not(:target)
+	{
+		animation:none !important;
 	}
 	
-		a[data-property]:after {
-			content: attr(data-property);
-			position: absolute;
-			right: 0;
-			left: 0;
-			bottom: -1.2em;
-			z-index: 2;
-			color: slategray;
-			font-size: 14px;
-			line-height: 1;
-			text-indent: 0;
-			text-shadow: none;
-			letter-spacing: 0;
+		A[data-property]:after
+		{
+			content:attr(data-property);
+			position:absolute;
+			right:0;
+			left:0;
+			bottom:-1.2em;
+			z-index:2;
+			color:slategray;
+			font-size:14px;
+			line-height:1;
+			text-indent:0;
+			text-shadow:none;
+			letter-spacing:0;
 		}
 	
-		a[data-property]:before {
-			content: counter(demo);
+		A[data-property]:before
+		{
+			content:counter(demo);
 		}
 	
-input[type="radio"] {
-	position: absolute;
-	clip: rect(0,0,0,0);
+INPUT[type="radio"]
+{
+	position:absolute;
+	clip:rect(0,0,0,0);
 }
 
-input[type="radio"] + label {
-	display: inline-block;
-	padding: .3em .7em;
-	border: 1px solid rgba(0,0,0,.3);
-	margin-top: 1em;
-	background: #809070;
-	color: white;
-	text-shadow: .05em .05em .2em rgba(0,0,0,.8);
-	cursor: pointer;
-	border-radius: .3em;
-	box-shadow: 0 1px rgba(255,255,255,.6) inset;
+INPUT[type="radio"] + LABEL
+{
+	display:inline-block;
+	padding:.3em .7em;
+	border:1px solid rgba(0,0,0,.3);
+	margin-top:1em;
+	background:#809070;
+	color:white;
+	text-shadow:.05em .05em .2em rgba(0,0,0,.8);
+	cursor:pointer;
+	border-radius:.3em;
+	box-shadow:0 1px rgba(255,255,255,.6) inset;
 }
 
-input[type="radio"]:not(:checked) + label {
-	background-image: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+INPUT[type="radio"]:not(:CHECKED) + LABEL
+{
+	background-image:linear-gradient(rgba(255,255,255,.3),rgba(255,255,255,0));
 }
 
-input[type="radio"]:checked + label {
-	box-shadow: .05em .05em .4em .1em rgba(0,0,0,.8) inset;
+INPUT[type="radio"]:CHECKED + LABEL
+{
+	box-shadow:.05em .05em .4em .1em rgba(0,0,0,.8) inset;
 }
 
-.in-page input[type="radio"] + label {
-	display: none;
+.in-page INPUT[type="radio"] + LABEL
+{
+	display:none;
 }
 
-#info {
-	position: absolute;
-	width: 510px;
-	height: 150px;
-	padding: 10px 15px;
-	box-sizing: border-box;
-	overflow: hidden;
-	background: black;
-	color: white;
-	text-align: left;
+#info
+{
+	position:absolute;
+	width:510px;
+	height:150px;
+	padding:10px 15px;
+	box-sizing:border-box;
+	overflow:hidden;
+	background:black;
+	color:white;
+	text-align:left;
 	transition:.5s;
 }
 
-.home > #info {
-	display: none;
+.home > #info
+{
+	display:none;
 }
-	
-	#info h1 {
-		color: slategray;
-		margin-bottom: .3em;
-	}
-	
-	#info > a {
-		position: absolute;
-		top: 10px;
-		right: 10px;
-		width: 2em;
-		line-height: 2;
-		font-size: 80%;
-		background: rgba(255,255,255,.25);
-		color: black;
-		text-align: center;
-		border-radius: 0 50% 50% 0;
-	}
-	
-	#info > a:hover {
-		background: #809070;
-	}
-	
-	#info > a[title="Previous"] {
-		right: 36px;
-		border-radius: 50% 0 0 50%;
+
+	#info H1
+	{
+		color:slategray;
+		margin-bottom:.3em;
 	}
 
-	dl {
-		font-size: 80%;
+	#info > A
+	{
+		position:absolute;
+		top:10px;
+		right:10px;
+		width:2em;
+		line-height:2;
+		font-size:80%;
+		background:rgba(255,255,255,.25);
+		color:black;
+		text-align:center;
+		border-radius:0 50% 50% 0;
 	}
-	
-	dl:after {
-		content: '';
-		display: block;
-		clear: both;
+
+	#info > A:hover
+	{
+		background:#809070;
 	}
-	
-		dt {
-			float: left;
-			clear: left;
-			width: 6em;
-			color: gray;
+
+	#info > A[title="Previous"]
+	{
+		right:36px;
+		border-radius:50% 0 0 50%;
+	}
+
+	DL
+	{
+		font-size:80%;
+	}
+
+	DL:after
+	{
+		content:'';
+		display:block;
+		clear:both;
+	}
+
+		DT
+		{
+			float:left;
+			clear:left;
+			width:6em;
+			color:gray;
 		}
-		
-		dd {
-			float: left;
-			clear: right;
-			white-space: nowrap;
+
+		DD
+		{
+			float:left;
+			clear:right;
+			white-space:nowrap;
 		}
-		
-			dd > a {
-				color: inherit;
+
+			DD > A
+			{
+				color:inherit;
 			}
-			
-				dd > a > img {
-					margin-right: 5px;
-					vertical-align: -8px;
-					border-radius: 12px;
+
+				DD > A > IMG
+				{
+					margin-right:5px;
+					vertical-align:-8px;
+					border-radius:12px;
 				}
 				
-.twitter-share-button {
-	position: fixed;
-	top: 10px;
-	left: 10px;
+.twitter-share-button
+{
+	position:fixed;
+	top:10px;
+	left:10px;
 }
 
-.github-ribbon {
-	position: absolute;
-	top: 0;
-	right: 0;
+.github-ribbon
+{
+	position:absolute;
+	top:0;
+	right:0;
 }
