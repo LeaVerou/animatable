@@ -1,99 +1,323 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE HTML>
+<META charset=UTF-8>
+<TITLE>Animatable: One property, two values, endless possiblities</TITLE>
+<LINK href=style.css rel=stylesheet>
+<SCRIPT src=http://leaverou.github.com/prefixfree/prefixfree.min.js></SCRIPT>
+<HGROUP>
+	<H1><A href=#>Animatable</A></H1>
+	<H2>One property, two values, endless possiblities</H2>
+</HGROUP>
+<INPUT type=radio name=animate id=on-hover checked>
+<LABEL for=on-hover>Animate on hover</LABEL>
+<INPUT type=radio name=animate id=all>
+<LABEL for=all>Animate all</LABEL>
 
-<meta charset="utf-8" />
-<title>Animatable: One property, two values, endless possiblities</title>
-<link href="style.css" rel="stylesheet" />
-<script src="http://leaverou.github.com/prefixfree/prefixfree.min.js"></script>
-</head>
-<body>
+<DIV role=main>
+	<A
+		data-property=background-color
+		data-from=slategray
+		data-to=black
+		>
+	</A>
+	<A
+		data-property=background-position
+		data-from="0 0"
+		data-to="100% 100%"
+		style="background-image:linear-gradient(-45deg, transparent 25%, black 25%, black 50%, transparent 50%, transparent 75%, black 75%, black); background-size:50px 50px"
+		>
+	</A>
+	<A
+		data-property=background-position
+		data-from="3px 0, 3px 0, 15px -150px, 15px -150px"
+		data-to="3px -70px, 3px -70px, 15px -80px, 15px -80px"
+		style="background-color: #E04332; background-repeat: repeat-x; background-size: 24px 300px; background-image: linear-gradient(-45deg, slategray 25%, transparent 25%), linear-gradient(45deg, transparent 75%, slategray 75%), linear-gradient(45deg, slategray 25%, transparent 25%), linear-gradient(-45deg, transparent 75%, slategray 75%);"
+		data-author=kizmarh
+		>
+	</A>
+	<A
+		data-property=background-size
+		data-from="5px 5px"
+		data-to="150px 150px"
+		style="background-image: repeating-radial-gradient(transparent, transparent 9px, black 11px, black 20px); background-position:center"
+		>
+	</A>
+	<A
+		data-property=border-radius
+		data-from=0
+		data-to=50%
+		>
+	</A>
+	<A
+		data-property=border-radius
+		data-from="0 100%"
+		data-to="100% 0"
+		>
+	</A>
+	<A
+		data-property=border-width
+		data-from=0
+		data-to=75px
+		style="border-style:solid; border-color: black;"
+		>
+	</A>
+	<A
+		data-property=border-width
+		data-from=0
+		data-to=35px
+		style="border-style:dashed; border-color: black;"
+		>
+	</A>
+	<A
+		data-property=border-width
+		data-from=0
+		data-to=75px
+		style="border-style:double; border-color: black;"
+		>
+	</A>
+	<A
+		data-property=box-shadow
+		data-from="0 0 black"
+		data-to="0 150px 10px -50px rgba(0,0,0,.5)"
+		>
+	</A>
+	<A
+		data-property=box-shadow
+		data-from="none"
+		data-to="inset -75px -75px 400px #000"
+		data-author=yuritkachenko
+		>
+	</A>
+	<A
+		data-property=box-shadow
+		data-from="inset 0 0 75px 75px slategray, 0 0 0 slategray"
+		data-to="inset 0 0 35px 35px transparent, 0 0 75px 50px transparent"
+		style="background: transparent; border-radius: 1px;"
+		data-author=kizmarh
+		>
+	</A>
+	<A
+		data-property=color
+		data-from=white
+		data-to=black
+		>
+	</A>
+	<A
+		data-property=font-size
+		data-from=60px
+		data-to=300px
+		>
+	</A>
+	<A
+		data-property=height
+		data-from=150px
+		data-to=0
+		>
+	</A>
+	<A
+		data-property=letter-spacing
+		data-from=0
+		data-to=100px
+		>
+	</A>
+	<A
+		data-property=line-height
+		data-from=10px
+		data-to=300px
+		>
+	</A>
+	<A
+		data-property=opacity
+		data-from=1
+		data-to=0
+		>
+	</A>
+	<A
+		data-property=outline-width
+		data-from=0
+		data-to=100px
+		style="outline-color:black; outline-style: solid;"
+		>
+	</A>
+	<A
+		data-property=outline-offset
+		data-from=-5px
+		data-to=30px
+		style="outline-style: dashed; outline-color:slategray;"
+		data-author=mkuehnel
+		>
+	</A>
+	<A
+		data-property=outline-color
+		data-from=transparent
+		data-to=red
+		style="outline-width: 30px; outline-style: solid;"
+		data-author=mkuehnel
+		>
+	</A>
+	<A
+		data-property=padding
+		data-from=0
+		data-to="50px 200px 50px 50px"
+		data-author=steno
+		>
+	</A>
+	<A
+		data-property=text-indent
+		data-from=0
+		data-to=100px
+		>
+	</A>
+	<A
+		data-property=text-shadow
+		data-from="0 0 black"
+		data-to="20px 20px 10px rgba(0,0,0,.5)"
+		>
+	</A>
+	<A
+		data-property=text-shadow
+		data-from="0 0 0 white"
+		data-to="0 0 10px white"
+		style="color: transparent;"
+		data-author=bartaz
+		>
+	</A>
+	<A
+		data-property=text-shadow
+		data-from="0 0 white"
+		data-to="0 0 rgba(255,255,255,0), -45px -45px 0 red, -30px -30px 0 orange, -15px -15px 0 yellow, 0 0 0 green, 15px 15px 0 blue, 30px 30px 0 indigo, 45px 45px 0 violet" style="color: transparent"
+		data-author=kizmarh
+		>
+	</A>
+	<A
+		data-property=top
+		data-from=0
+		data-to=100px
+		style="position:relative"
+		>
+	</A>
+	<A
+		data-property=transform
+		data-from=rotate(0deg)
+		data-to=rotate(360deg)
+		>
+	</A>
+	<A
+		data-property=transform
+		data-from=scale(1)
+		data-to=scale(2)
+		>
+	</A>
+	<A
+		data-property=transform
+		data-from=skew(0deg)
+		data-to=skew(180deg)
+		>
+	</A>
+	<A
+		data-property=transform
+		data-from="rotate(0deg) scale(1)"
+		data-to="rotate(360deg) scale(0)"
+		>
+	</A>
+	<A
+		data-property=transform
+		data-from="perspective(400px) rotateY(0deg)"
+		data-to="perspective(400px) rotateY(360deg)"
+		>
+	</A>
+	<A
+		data-property=transform
+		data-from="perspective(400px) rotateX(0deg)"
+		data-to="perspective(400px) rotateX(360deg)"
+		data-author=calvein
+		>
+	</A>
+	<A
+		data-property=transform
+		data-from="perspective(400px) rotateY(0deg)"
+		data-to="perspective(400px) translateZ(150px) rotateY(180deg)"
+		data-author=bartaz
+		>
+	</A>
+	<A
+		data-property=transform
+		data-from="perspective(400px) translate3d(0,0,0) rotateX(0) rotateY(0) rotateZ(0)"
+		data-to="perspective(400px) translate3d(0,0,-5000px) rotateX(720deg) rotateY(360deg) rotateZ(-360deg)"
+		data-author=bartaz
+		>
+	</A>
+	<A
+		data-property=transform
+		data-from="perspective(400px) rotate3d(1,1,0,0deg)"
+		data-to="perspective(400px) rotate3d(1,1,0,180deg)"
+		data-author=bartaz
+		>
+	</A>
+	<A
+		data-property=transform-origin
+		data-from="50% 50%"
+		data-to="0 100%"
+		style="transform:rotate(45deg)"
+		>
+	</A>
+	<A
+		data-property=width
+		data-from=150px
+		data-to=330px
+		data-author=mkuehnel
+		>
+	</A>
+</DIV>
 
-<hgroup>
-	<h1><a href="#">Animatable</a></h1>
-	<h2>One property, two values, endless possiblities</h2>
-</hgroup>
-
-<input type="radio" name="animate" id="on-hover" checked />
-<label for="on-hover">Animate on hover</label>
-<input type="radio" name="animate" id="all" />
-<label for="all">Animate all</label>
-
-<div role="main">
-	<a data-property="background-color" data-from="slategray" data-to="black"></a>
-	<a data-property="background-position" data-from="0 0" data-to="100% 100%" style="background-image: linear-gradient(-45deg, transparent 25%, black 25%, black 50%, transparent 50%, transparent 75%, black 75%, black); background-size:50px 50px"></a>
-	<a data-property="background-position" data-from="3px 0, 3px 0, 15px -150px, 15px -150px" data-to="3px -70px, 3px -70px, 15px -80px, 15px -80px" style="background-color: #E04332; background-repeat: repeat-x; background-size: 24px 300px; background-image: linear-gradient(-45deg, slategray 25%, transparent 25%), linear-gradient(45deg, transparent 75%, slategray 75%), linear-gradient(45deg, slategray 25%, transparent 25%), linear-gradient(-45deg, transparent 75%, slategray 75%);" data-author="kizmarh"></a>
-	<a data-property="background-size" data-from="5px 5px" data-to="150px 150px" style="background-image: repeating-radial-gradient(transparent, transparent 9px, black 11px, black 20px); background-position:center"></a>
-	<a data-property="border-radius" data-from="0" data-to="50%"></a>
-	<a data-property="border-radius" data-from="0 100%" data-to="100% 0"></a>
-	<a data-property="border-width" data-from="0" data-to="75px" style="border-style:solid; border-color: black;"></a>
-	<a data-property="border-width" data-from="0" data-to="35px" style="border-style:dashed; border-color: black;"></a>
-	<a data-property="border-width" data-from="0" data-to="75px" style="border-style:double; border-color: black;"></a>
-	<a data-property="box-shadow" data-from="0 0 black" data-to="0 150px 10px -50px rgba(0,0,0,.5)"></a>
-	<a data-property="box-shadow" data-from="none" data-to="inset -75px -75px 400px #000" data-author="yuritkachenko"></a>
-	<a data-property="box-shadow" data-from="inset 0 0 75px 75px slategray, 0 0 0 slategray" data-to="inset 0 0 35px 35px transparent, 0 0 75px 50px transparent" style="background: transparent; border-radius: 1px;" data-author="kizmarh"></a>
-	<a data-property="color" data-from="white" data-to="black"></a>
-	<a data-property="font-size" data-from="60px" data-to="300px"></a>
-	<a data-property="height" data-from="150px" data-to="0"></a>
-	<a data-property="letter-spacing" data-from="0" data-to="100px"></a>
-	<a data-property="line-height" data-from="10px" data-to="300px"></a>
-	<a data-property="opacity" data-from="1" data-to="0"></a>
-	<a data-property="outline-width" data-from="0" data-to="100px" style="outline-color:black; outline-style: solid;"></a>
-	<a data-property="outline-offset" data-from="-5px" data-to="30px" style="outline-style: dashed; outline-color:slategray;" data-author="mkuehnel"></a>
-	<a data-property="outline-color" data-from="transparent" data-to="red" style="outline-width: 30px; outline-style: solid;" data-author="mkuehnel"></a>
-	<a data-property="padding" data-from="0" data-to="50px 200px 50px 50px" data-author="steno"></a>
-	<a data-property="text-indent" data-from="0" data-to="100px"></a>
-	<a data-property="text-shadow" data-from="0 0 black" data-to="20px 20px 10px rgba(0,0,0,.5)"></a>
-	<a data-property="text-shadow" data-from="0 0 0 white" data-to="0 0 10px white" style="color: transparent;" data-author="bartaz"></a>
-	<a data-property="text-shadow" data-from="0 0 white" data-to="0 0 rgba(255,255,255,0), -45px -45px 0 red, -30px -30px 0 orange, -15px -15px 0 yellow, 0 0 0 green, 15px 15px 0 blue, 30px 30px 0 indigo, 45px 45px 0 violet" style="color: transparent" data-author="kizmarh"></a>
-	<a data-property="top" data-from="0" data-to="100px" style="position:relative"></a>
-	<a data-property="transform" data-from="rotate(0deg)" data-to="rotate(360deg)"></a>
-	<a data-property="transform" data-from="scale(1)" data-to="scale(2)"></a>
-	<a data-property="transform" data-from="skew(0deg)" data-to="skew(180deg)"></a>
-	<a data-property="transform" data-from="rotate(0deg) scale(1)" data-to="rotate(360deg) scale(0)"></a>
-	<a data-property="transform" data-from="perspective(400px) rotateY(0deg)" data-to="perspective(400px) rotateY(360deg)"></a>
-	<a data-property="transform" data-from="perspective(400px) rotateX(0deg)" data-to="perspective(400px) rotateX(360deg)" data-author="calvein"></a>
-	<a data-property="transform" data-from="perspective(400px) rotateY(0deg)" data-to="perspective(400px) translateZ(150px) rotateY(180deg)" data-author="bartaz"></a>
-	<a data-property="transform" data-from="perspective(400px) translate3d(0,0,0) rotateX(0) rotateY(0) rotateZ(0)" data-to="perspective(400px) translate3d(0,0,-5000px) rotateX(720deg) rotateY(360deg) rotateZ(-360deg)" data-author="bartaz"></a>
-	<a data-property="transform" data-from="perspective(400px) rotate3d(1,1,0,0deg)" data-to="perspective(400px) rotate3d(1,1,0,180deg)" data-author="bartaz"></a>
-	<a data-property="transform-origin" data-from="50% 50%" data-to="0 100%" style="transform:rotate(45deg)"></a>
-	<a data-property="width" data-from="150px" data-to="330px" data-author="mkuehnel"></a>
-</div>
-
-<section id="info">
-	<h1>box-shadow</h1>
-	<a href="#" title="Previous">◀</a>
-	<a href="#" title="Next">▶</a>
-	<dl>
-		<dt>From:</dt>
-		<dd>0 0 black</dd>
+<SECTION id=info>
+	<H1>box-shadow</H1>
+	<A href=# title=Previous>◀</A>
+	<A href=# title=Next>▶</A>
+	<DL>
+		<DT>From:
+		<DD>0 0 black
 		
-		<dt>To:</dt>
-		<dd>0 150px 10px -50px rgba(0,0,0,.5)</dd>
+		<DT>To:
+		<DD>0 150px 10px -50px rgba(0,0,0,.5)
 		
-		<dt>Author:</dt>
-		<dd>@leaverou</dd>
-	</dl>
-</section>
+		<DD>Author:
+		<DD>@leaverou
+	</DL>
+</SECTION>
 
-<footer>Made by <a href="http://leaverou.me">Lea Verou</a> with care</footer>
+<FOOTER>Made by <A href=http://leaverou.me>Lea Verou</A> with care</FOOTER>
 
-<script src="index.js"></script>
+<SCRIPT src=index.js></SCRIPT>
 
-<a href="https://github.com/leaverou/animatable" target="_blank" class="github-ribbon">
-	<img src="https://a248.e.akamai.net/assets.github.com/img/71eeaab9d563c2b3c590319b398dd35683265e85/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub">
-</a>
+<A
+	href=https://github.com/leaverou/animatable
+	target=_blank
+	class=github-ribbon
+	>
+	<img
+		src=https://a248.e.akamai.net/assets.github.com/img/71eeaab9d563c2b3c590319b398dd35683265e85/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67
+		alt="Fork me on GitHub"
+	>
+</A>
 
-<a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="LeaVerou">Tweet</a>
-<script src="https://platform.twitter.com/widgets.js"></script>
+<A
+	href=https://twitter.com/share
+	class=twitter-share-button
+	data-count=vertical
+	data-via=LeaVerou
+	>Tweet
+</A>
+<SCRIPT src=https://platform.twitter.com/widgets.js></SCRIPT>
 
-<script src="http://www.google-analytics.com/ga.js"></script> 
-<script> 
-try {
-var pageTracker = _gat._getTracker("UA-597483-5");
-pageTracker._trackPageview();
-} catch(err) {}
-</script> 
-
-</body>
-</html>
+<SCRIPT src=http://www.google-analytics.com/ga.js></SCRIPT>
+<SCRIPT>
+try
+{
+	var pageTracker=_gat._getTracker('UA-597483-5');
+	pageTracker._trackPageview();
+}
+catch(err)
+{
+	
+}
+</SCRIPT>
