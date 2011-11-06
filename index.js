@@ -3,7 +3,7 @@ function $$(expr, con) { return [].slice.call((con || document).querySelectorAll
 
 var css = [];
 
-$$('a[data-property]').forEach(function(el, i){
+$$('A[data-property]').forEach(function(el, i){
 	var property = el.getAttribute('data-property'),
 		from = el.getAttribute('data-from'),
 		to = el.getAttribute('data-to');
@@ -48,13 +48,13 @@ setTimeout(onhashchange = function() {
 		next = target.nextElementSibling,
 		author = target.getAttribute('data-author') || 'leaverou';
 	
-	$('h1', info).innerHTML = target.getAttribute('data-property');
+	$('H1', info).innerHTML = target.getAttribute('data-property');
 	$('dd:first-of-type', info).innerHTML = target.getAttribute('data-from');
 	$('dd:nth-of-type(2)', info).innerHTML = target.getAttribute('data-to');
-	$('dd:nth-of-type(3)', info).innerHTML = '<a href="http://twitter.com/' + author + '" target="_blank"><img src="http://twitter.com//api/users/profile_image?screen_name=' + author + '&size=mini"/>@' + author + '</a>';
+	$('dd:nth-of-type(3)', info).innerHTML = '<A href="http://twitter.com/' + author + '" target="_blank"><IMG src="http://twitter.com//api/users/profile_image?screen_name=' + author + '&size=mini"/>@' + author + '</A>';
 	
-	$('a[title="Previous"]', info).setAttribute('href', '#' + (previous? previous.id : ''));
-	$('a[title="Next"]', info).setAttribute('href', '#' + (next? next.id : ''));
+	$('A[title="Previous"]', info).setAttribute('href', '#' + (previous? previous.id : ''));
+	$('A[title="Next"]', info).setAttribute('href', '#' + (next? next.id : ''));
 	
 	setTimeout(function() {
 		if(2*target.offsetLeft + target.offsetWidth < innerWidth) {
@@ -77,10 +77,10 @@ onkeyup = function(evt) {
 			break;
 		case 37:
 		case 38:
-			location.hash = location.hash? $('a[title="Previous"]').hash : $('a[data-property]:last-child').hash;
+			location.hash = location.hash? $('A[title="Previous"]').hash : $('A[data-property]:last-child').hash;
 			break;
 		case 39:
 		case 40:
-			location.hash = location.hash? $('a[title="Next"]').hash : $('a[data-property]:first-child').hash;
+			location.hash = location.hash? $('A[title="Next"]').hash : $('A[data-property]:first-child').hash;
 	}
 };
