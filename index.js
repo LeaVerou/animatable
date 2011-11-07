@@ -44,8 +44,8 @@ setTimeout(onhashchange = function() {
 	document.body.className = 'in-page';
 	
 	var info = $('#info'),
-		previous = target.previousElementSibling,
-		next = target.nextElementSibling,
+		previous = target.parentNode.previousElementSibling? target.parentNode.previousElementSibling.firstElementChild : null,
+		next = target.parentNode.nextElementSibling? target.parentNode.nextElementSibling.firstElementChild : null,
 		author = target.getAttribute('data-author') || 'leaverou';
 	
 	$('h1', info).innerHTML = target.getAttribute('data-property');
@@ -77,10 +77,10 @@ onkeyup = function(evt) {
 			break;
 		case 37:
 		case 38:
-			location.hash = location.hash? $('a[title="Previous"]').hash : $('a[data-property]:last-child').hash;
+			location.hash = location.hash? $('a[title="Previous"]').hash : $('.hover-bg:last-child a[data-property]').hash;
 			break;
 		case 39:
 		case 40:
-			location.hash = location.hash? $('a[title="Next"]').hash : $('a[data-property]:first-child').hash;
+			location.hash = location.hash? $('a[title="Next"]').hash : $('.hover-bg:first-child a[data-property]').hash;
 	}
 };
