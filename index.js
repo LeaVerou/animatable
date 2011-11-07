@@ -47,6 +47,8 @@ setTimeout(onhashchange = function() {
 		previous = target.previousElementSibling,
 		next = target.nextElementSibling,
 		author = target.getAttribute('data-author') || 'leaverou';
+
+    console.log(target)
 	
 	$('h1', info).innerHTML = target.getAttribute('data-property');
 	$('dd:first-of-type', info).innerHTML = target.getAttribute('data-from');
