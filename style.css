@@ -35,13 +35,20 @@ div[role="main"]:after {
 	clear: both;
 }
 
-	a[data-property] {
-		position: relative;
-		float: left;
+  .hover-bg {
+		margin: 0 15px 30px;
+  }
+
+  .hover-bg,
+  a[data-property] {
 		width: 150px;
 		height: 150px;
+		float: left;
+  }
+
+	a[data-property] {
+		position: relative;
 		box-sizing: border-box;
-		margin: 0 15px 30px;
 		background: slategray;
 		color: white;
 		font-size: 60px;
@@ -54,7 +61,7 @@ div[role="main"]:after {
 		opacity: .2 !important;
 	}
 	
-	#on-hover:checked ~ div[role="main"] > a[data-property]:not(:hover):not(:target),
+	#on-hover:checked ~ div[role="main"] > .hover-bg:not(:hover) > a[data-property]:not(:target),
 	body.in-page a[data-property]:not(:target) {
 		animation: none !important;
 	}
