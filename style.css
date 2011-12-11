@@ -47,7 +47,6 @@ div[role="main"]:after {
 		font-size: 60px;
 		line-height: 150px;
 		text-align: center;
-		counter-increment: demo;
 	}
 	
 	body.in-page a[data-property]:not(:target) {
@@ -74,7 +73,9 @@ div[role="main"]:after {
 			letter-spacing: 0;
 		}
 	
-		a[data-property]:before {
+		a[data-property]:before 
+		{
+			counter-increment: demo;
 			content: counter(demo);
 		}
 	
