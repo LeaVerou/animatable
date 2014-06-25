@@ -48,6 +48,7 @@ div[role="main"]:after {
 		line-height: 150px;
 		text-align: center;
 		counter-increment: demo;
+		outline-color: transparent;
 	}
 	
 	body.in-page a[data-property]:not(:target) {
