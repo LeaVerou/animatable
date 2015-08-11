@@ -34,7 +34,7 @@ StyleFix.styleElement(style);
 document.head.appendChild(style);
 
 setTimeout(onhashchange = function() {
-	var target = location.hash? $(location.hash.replace(/([^\w-#])/g, '\\$1')) : null;
+	var target = location.hash? $(location.hash.replace(/([^#\w-])/g, '\\$1')) : null;
 	
 	if(!target) {
 		document.body.className = 'home';
